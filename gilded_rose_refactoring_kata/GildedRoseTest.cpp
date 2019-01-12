@@ -10,3 +10,10 @@ TEST(GildedRoseTest, Foo)
     app.updateQuality();
     EXPECT_EQ("Foo", app.items[0].name);
 }
+
+/*
+ * Things to note here:
+ * 
+ * - 52% coverage of GildedRose.cpp
+ * - The actual calculation result (new quality) is not tested
+ */
