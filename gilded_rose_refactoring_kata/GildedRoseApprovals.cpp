@@ -87,7 +87,7 @@ TEST(GildedRoseApprovalTests, VerifyMoreCombinations)
 {
     std::vector<string> names { "Foo", "Aged Brie", "Backstage passes to a TAFKAL80ETC concert" };
     std::vector<int> sellIns { 0 };
-    std::vector<int> qualities { 0, 1 };
+    std::vector<int> qualities { 0, 1, 2 };
 
     CombinationApprovals::verifyAllCombinations<
         std::vector<string>, std::vector<int>, std::vector<int>, Item>(
@@ -99,3 +99,10 @@ TEST(GildedRoseApprovalTests, VerifyMoreCombinations)
             },
             names, sellIns, qualities);
 }
+
+/* Things to note
+ * 1. Test coverage at 100% on GildedRose.cpp, according to OpenCppCoverage
+ * 2. But there are many values in the source code that are not mentioned
+ *    in our tests. We haven't covered all the unwritten 'else' cases.
+ * 3. So branch coverage is less than 100%.
+ */
