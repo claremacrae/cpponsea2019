@@ -85,10 +85,9 @@ TEST(GildedRoseApprovalTests, VerifyCombinations)
 
 TEST(GildedRoseApprovalTests, VerifyMoreCombinations)
 {
-    std::vector<string> names { "Foo", "Aged Brie", "Backstage passes to a TAFKAL80ETC concert",
-                                "Sulfuras, Hand of Ragnaros"};
-    std::vector<int> sellIns { -1, 0, 11 };
-    std::vector<int> qualities { 0, 1, 2, 49, 50 };
+    std::vector<string> names { "Foo", "Aged Brie", "Backstage passes to a TAFKAL80ETC concert" };
+    std::vector<int> sellIns { 0 };
+    std::vector<int> qualities { 0, 1, 2 };
 
     CombinationApprovals::verifyAllCombinations<
         std::vector<string>, std::vector<int>, std::vector<int>, Item>(
@@ -106,4 +105,31 @@ TEST(GildedRoseApprovalTests, VerifyMoreCombinations)
  * 2. But there are many values in the source code that are not mentioned
  *    in our tests. We haven't covered all the unwritten 'else' cases.
  * 3. So branch coverage is less than 100%.
+ * 4. After I added dummy else blocks to all the if statements in
+ *    GildedRose.cpp, coverage was 83%.
+ */
+
+TEST(GildedRoseApprovalTests, VerifyEvenMoreCombinations)
+{
+    std::vector<string> names { "Foo", "Aged Brie", "Backstage passes to a TAFKAL80ETC concert",
+                                "Sulfuras, Hand of Ragnaros"};
+    std::vector<int> sellIns { -1, 0, 11 };
+    std::vector<int> qualities { 0, 1, 2, 49, 50 };
+
+    CombinationApprovals::verifyAllCombinations<
+        std::vector<string>, std::vector<int>, std::vector<int>, Item>(
+            [](string name, int sellIn, int quality) {
+                vector<Item> items = {Item(name, sellIn, quality)};
+                GildedRose app(items);
+                app.updateQuality();
+                return items[0];
+            },
+            names, sellIns, qualities);
+}
+
+/* Things to note
+ * 1. Test coverage at 100% on GildedRose.cpp, according to OpenCppCoverage,
+ *    after adding else blocks in that file, to test more boolean combinations
+ * 2. So branch coverage is now 100%.
+ * 3. We would be able to refactor confidently.
  */
