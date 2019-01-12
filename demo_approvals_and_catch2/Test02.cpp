@@ -54,4 +54,29 @@ TEST_CASE("TestFixedInput")
  *   any of the ones supported by default)
  * - No need to delete the received files - they are deleted automatically
  *   after successful tests runs.
- */
+ *   
+ * Verifications
+ * -------------
+ * 
+ * Note that if you look at the statistics from your test framework, it
+ * may appear that your Approvals tests do not add any new verifications
+ * or assertions.
+ * 
+ * When an Approvals test fails, with catch as the testing framework, the output 
+ * looks something like this:
+ 
+    ...cpponsea2019/demo_approvals_and_catch2/test02.cpp(5): FAILED:
+    due to unexpected exception with message:
+      Failed Approval:
+      Received does not match approved
+      Received : ".../cpponsea2019/demo_approvals_and_catch2/Test02.TestFixedInput.received.txt"
+      Approved : ".../cpponsea2019/demo_approvals_and_catch2/Test02.TestFixedInput.approved.txt"
+
+    ===============================================================================
+    test cases: 2 | 1 passed | 1 failed
+    assertions: 3 | 2 passed | 1 failed
+
+* This is because Approvals is silent if the file comparison passes, and throws
+* an exception to indication either a missing approved file, or mismatch
+* between received and approved files.
+*/
