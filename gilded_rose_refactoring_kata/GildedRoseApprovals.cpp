@@ -70,6 +70,7 @@ TEST(GildedRoseApprovalTests, VerifyCombinations)
             },
             names, sellIns, qualities);
 }
+
 /* Things to note
  * 1. By using Approvals::verifyAllCombinations, it is easy to add many 
  *    extra values to test.
@@ -81,3 +82,20 @@ TEST(GildedRoseApprovalTests, VerifyCombinations)
 (Aged Brie, 0, 0) => name: Aged Brie, sellIn: -1, quality: 2
 
  */
+
+TEST(GildedRoseApprovalTests, VerifyMoreCombinations)
+{
+    std::vector<string> names { "Foo", "Aged Brie" };
+    std::vector<int> sellIns { 0 };
+    std::vector<int> qualities { 0, 1 };
+
+    CombinationApprovals::verifyAllCombinations<
+        std::vector<string>, std::vector<int>, std::vector<int>, Item>(
+            [](string name, int sellIn, int quality) {
+                vector<Item> items = {Item(name, sellIn, quality)};
+                GildedRose app(items);
+                app.updateQuality();
+                return items[0];
+            },
+            names, sellIns, qualities);
+}
