@@ -29,3 +29,4 @@ enable_testing()
 
 add_subdirectory(demo_approvals_and_catch2)
 add_subdirectory(demo_approvals_and_googletest)
+add_subdirectory(gilded_rose_refactoring_kata)
