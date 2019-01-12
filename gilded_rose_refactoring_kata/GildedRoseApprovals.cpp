@@ -85,7 +85,8 @@ TEST(GildedRoseApprovalTests, VerifyCombinations)
 
 TEST(GildedRoseApprovalTests, VerifyMoreCombinations)
 {
-    std::vector<string> names { "Foo", "Aged Brie", "Backstage passes to a TAFKAL80ETC concert" };
+    std::vector<string> names { "Foo", "Aged Brie", "Backstage passes to a TAFKAL80ETC concert",
+                                "Sulfuras, Hand of Ragnaros"};
     std::vector<int> sellIns { 0 };
     std::vector<int> qualities { 0, 1, 2 };
 

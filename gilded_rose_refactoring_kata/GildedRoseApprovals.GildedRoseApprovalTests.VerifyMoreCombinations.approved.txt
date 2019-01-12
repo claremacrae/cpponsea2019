@@ -7,4 +7,7 @@
 (Backstage passes to a TAFKAL80ETC concert, 0, 0) => name: Backstage passes to a TAFKAL80ETC concert, sellIn: -1, quality: 0
 (Backstage passes to a TAFKAL80ETC concert, 0, 1) => name: Backstage passes to a TAFKAL80ETC concert, sellIn: -1, quality: 0
 (Backstage passes to a TAFKAL80ETC concert, 0, 2) => name: Backstage passes to a TAFKAL80ETC concert, sellIn: -1, quality: 0
+(Sulfuras, Hand of Ragnaros, 0, 0) => name: Sulfuras, Hand of Ragnaros, sellIn: 0, quality: 0
+(Sulfuras, Hand of Ragnaros, 0, 1) => name: Sulfuras, Hand of Ragnaros, sellIn: 0, quality: 1
+(Sulfuras, Hand of Ragnaros, 0, 2) => name: Sulfuras, Hand of Ragnaros, sellIn: 0, quality: 2
 
