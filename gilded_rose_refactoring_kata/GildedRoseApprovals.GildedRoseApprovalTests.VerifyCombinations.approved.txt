@@ -1,0 +1,3 @@
+(Foo, 0, 0) => name: Foo, sellIn: -1, quality: 0
+(Aged Brie, 0, 0) => name: Aged Brie, sellIn: -1, quality: 2
+

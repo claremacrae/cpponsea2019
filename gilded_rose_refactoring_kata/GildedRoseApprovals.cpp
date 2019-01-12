@@ -32,3 +32,52 @@ TEST(GildedRoseApprovals, TestOneValue)
  *    an implementation here in the testsuite.
  * 3. Still only 52% coverage of GildedRose.cpp
  */
+
+TEST(GildedRoseApprovals, TestMultipleValues)
+{
+    vector<Item> items;
+    items.push_back(Item("Foo", 0, 0));
+    items.push_back(Item("Aged Brie", 0, 0));
+    GildedRose app(items);
+    app.updateQuality();
+    Approvals::verifyAll(app.items);
+}
+
+/* Things to note
+ * 1. By using Approvals::verifyAll, it is easy to add extra values to test
+ * 2. Test coverage up to 67% on GildedRose.cpp
+ * 3. The test output now looks like this, showing the indices of the objects
+ *    after they have been updated. They don't show the initial values though.
+
+[0] = name: Foo, sellIn: -1, quality: 0
+[1] = name: Aged Brie, sellIn: -1, quality: 2
+
+ */
+
+TEST(GildedRoseApprovalTests, VerifyCombinations)
+{
+    std::vector<string> names { "Foo", "Aged Brie" };
+    std::vector<int> sellIns { 0 };
+    std::vector<int> qualities { 0 };
+
+    CombinationApprovals::verifyAllCombinations<
+        std::vector<string>, std::vector<int>, std::vector<int>, Item>(
+            [](string name, int sellIn, int quality) {
+                vector<Item> items = {Item(name, sellIn, quality)};
+                GildedRose app(items);
+                app.updateQuality();
+                return items[0];
+            },
+            names, sellIns, qualities);
+}
+/* Things to note
+ * 1. By using Approvals::verifyAllCombinations, it is easy to add many 
+ *    extra values to test.
+ * 2. Test coverage still 67% on GildedRose.cpp, as inputs are unchanged
+ * 3. The test output now looks like this, showing the indices of the objects
+ *    after they have been updated. They don't show the initial values though.
+
+(Foo, 0, 0) => name: Foo, sellIn: -1, quality: 0
+(Aged Brie, 0, 0) => name: Aged Brie, sellIn: -1, quality: 2
+
+ */
