@@ -6,6 +6,6 @@ set(SOURCE_FILES
     main.cpp
     Test01.cpp
     Test02.cpp
-)
+    Test03CustomReporters.cpp)
 add_executable(${PROJECT_NAME} ${SOURCE_FILES} )
 add_test(NAME ${PROJECT_NAME} COMMAND ${PROJECT_NAME})
