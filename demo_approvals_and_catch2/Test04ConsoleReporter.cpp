@@ -5,6 +5,10 @@
 
 TEST_CASE("UseConsoleReporter")
 {
+    // The intention of this is to show the text-based diff output next to the
+    // output reporting the test failure.
+    // However, catch2 separates the two, so that the diff output appears a long
+    // way before the FAILED output.
     FirstWorkingReporter diff_reporter(
         {
             // On Windows, SystemLauncher does not yet know how to use the "where" command to find
