@@ -3,10 +3,14 @@
 
 TEST_CASE("UseSpecificReporter")
 {
-    Approvals::verify("Some\nMulti-line\noutput", Windows::AraxisMergeReporter());
+    Approvals::verify(
+        "Some\nMulti-line\noutput",
+        Windows::AraxisMergeReporter());
 }
 
 TEST_CASE("UseCustomReporter")
 {
-    Approvals::verify("Some\nMulti-line\noutput", GenericDiffReporter("C:\\Program Files\\TortoiseHg\\lib\\kdiff3.exe"));
+    Approvals::verify(
+        "Some\nMulti-line\noutput",
+        GenericDiffReporter(R"(C:\Program Files\TortoiseHg\lib\kdiff3.exe)"));
 }
