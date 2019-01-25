@@ -54,6 +54,18 @@ TEST(GildedRoseApprovals, TestMultipleValues)
 
  */
 
+// Helper function to reduce boilerplate code
+Item getUpdatedItem(string name, int sellIn, int quality)
+{
+    vector<Item> items;
+    items.push_back(Item(name, sellIn, quality));
+    GildedRose app(items);
+
+    app.updateQuality();
+
+    return app.items[0];
+}
+
 TEST(GildedRoseApprovalTests, VerifyCombinations)
 {
     std::vector<string> names { "Foo", "Aged Brie" };
@@ -63,10 +75,7 @@ TEST(GildedRoseApprovalTests, VerifyCombinations)
     CombinationApprovals::verifyAllCombinations<
         std::vector<string>, std::vector<int>, std::vector<int>, Item>(
             [](string name, int sellIn, int quality) {
-                vector<Item> items = {Item(name, sellIn, quality)};
-                GildedRose app(items);
-                app.updateQuality();
-                return items[0];
+                return getUpdatedItem(name, sellIn, quality);
             },
             names, sellIns, qualities);
 }
@@ -92,10 +101,7 @@ TEST(GildedRoseApprovalTests, VerifyMoreCombinations)
     CombinationApprovals::verifyAllCombinations<
         std::vector<string>, std::vector<int>, std::vector<int>, Item>(
             [](string name, int sellIn, int quality) {
-                vector<Item> items = {Item(name, sellIn, quality)};
-                GildedRose app(items);
-                app.updateQuality();
-                return items[0];
+                return getUpdatedItem(name, sellIn, quality);
             },
             names, sellIns, qualities);
 }
@@ -119,10 +125,7 @@ TEST(GildedRoseApprovalTests, VerifyEvenMoreCombinations)
     CombinationApprovals::verifyAllCombinations<
         std::vector<string>, std::vector<int>, std::vector<int>, Item>(
             [](string name, int sellIn, int quality) {
-                vector<Item> items = {Item(name, sellIn, quality)};
-                GildedRose app(items);
-                app.updateQuality();
-                return items[0];
+                return getUpdatedItem(name, sellIn, quality);
             },
             names, sellIns, qualities);
 }
@@ -144,10 +147,7 @@ TEST(GildedRoseApprovalTests, VerifyEvenMoreCombinationsAfterMutation)
     CombinationApprovals::verifyAllCombinations<
         std::vector<string>, std::vector<int>, std::vector<int>, Item>(
             [](string name, int sellIn, int quality) {
-                vector<Item> items = {Item(name, sellIn, quality)};
-                GildedRose app(items);
-                app.updateQuality();
-                return items[0];
+                return getUpdatedItem(name, sellIn, quality);
             },
             names, sellIns, qualities);
 }
