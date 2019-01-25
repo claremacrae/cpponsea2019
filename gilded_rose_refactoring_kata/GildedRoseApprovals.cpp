@@ -3,7 +3,9 @@
 
 #include "GildedRose.h"
 
-std::ostream& operator<<(std::ostream& os, const Item& obj)
+using namespace std;
+
+ostream& operator<<(ostream& os, const Item& obj)
 {
     return os
         << "name: " << obj.name
@@ -68,12 +70,12 @@ Item getUpdatedItem(string name, int sellIn, int quality)
 
 TEST(GildedRoseApprovalTests, VerifyCombinations)
 {
-    std::vector<string> names { "Foo", "Aged Brie" };
-    std::vector<int> sellIns { 0 };
-    std::vector<int> qualities { 0 };
+    vector<string> names { "Foo", "Aged Brie" };
+    vector<int> sellIns { 0 };
+    vector<int> qualities { 0 };
 
     CombinationApprovals::verifyAllCombinations<
-        std::vector<string>, std::vector<int>, std::vector<int>, Item>(
+        vector<string>, vector<int>, vector<int>, Item>(
             [](string name, int sellIn, int quality) {
                 return getUpdatedItem(name, sellIn, quality);
             },
@@ -94,12 +96,12 @@ TEST(GildedRoseApprovalTests, VerifyCombinations)
 
 TEST(GildedRoseApprovalTests, VerifyMoreCombinations)
 {
-    std::vector<string> names { "Foo", "Aged Brie", "Backstage passes to a TAFKAL80ETC concert" };
-    std::vector<int> sellIns { 0 };
-    std::vector<int> qualities { 0, 1, 2 };
+    vector<string> names { "Foo", "Aged Brie", "Backstage passes to a TAFKAL80ETC concert" };
+    vector<int> sellIns { 0 };
+    vector<int> qualities { 0, 1, 2 };
 
     CombinationApprovals::verifyAllCombinations<
-        std::vector<string>, std::vector<int>, std::vector<int>, Item>(
+        vector<string>, vector<int>, vector<int>, Item>(
             [](string name, int sellIn, int quality) {
                 return getUpdatedItem(name, sellIn, quality);
             },
@@ -117,13 +119,13 @@ TEST(GildedRoseApprovalTests, VerifyMoreCombinations)
 
 TEST(GildedRoseApprovalTests, VerifyEvenMoreCombinations)
 {
-    std::vector<string> names { "Foo", "Aged Brie", "Backstage passes to a TAFKAL80ETC concert",
+    vector<string> names { "Foo", "Aged Brie", "Backstage passes to a TAFKAL80ETC concert",
                                 "Sulfuras, Hand of Ragnaros"};
-    std::vector<int> sellIns { -1, 0, 11 };
-    std::vector<int> qualities { 0, 1, 2, 49, 50 };
+    vector<int> sellIns { -1, 0, 11 };
+    vector<int> qualities { 0, 1, 2, 49, 50 };
 
     CombinationApprovals::verifyAllCombinations<
-        std::vector<string>, std::vector<int>, std::vector<int>, Item>(
+        vector<string>, vector<int>, vector<int>, Item>(
             [](string name, int sellIn, int quality) {
                 return getUpdatedItem(name, sellIn, quality);
             },
@@ -139,13 +141,13 @@ TEST(GildedRoseApprovalTests, VerifyEvenMoreCombinations)
 
 TEST(GildedRoseApprovalTests, VerifyEvenMoreCombinationsAfterMutation)
 {
-    std::vector<string> names { "Foo", "Aged Brie", "Backstage passes to a TAFKAL80ETC concert",
+    vector<string> names { "Foo", "Aged Brie", "Backstage passes to a TAFKAL80ETC concert",
                                 "Sulfuras, Hand of Ragnaros"};
-    std::vector<int> sellIns { -1, 0, 2, 6, 11 };
-    std::vector<int> qualities { 0, 1, 2, 49, 50 };
+    vector<int> sellIns { -1, 0, 2, 6, 11 };
+    vector<int> qualities { 0, 1, 2, 49, 50 };
 
     CombinationApprovals::verifyAllCombinations<
-        std::vector<string>, std::vector<int>, std::vector<int>, Item>(
+        vector<string>, vector<int>, vector<int>, Item>(
             [](string name, int sellIn, int quality) {
                 return getUpdatedItem(name, sellIn, quality);
             },
