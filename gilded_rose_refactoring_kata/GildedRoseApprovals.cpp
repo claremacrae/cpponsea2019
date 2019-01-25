@@ -19,7 +19,7 @@ TEST(GildedRoseApprovals, TestOneValue)
     items.push_back(Item("Foo", 0, 0));
     GildedRose app(items);
     app.updateQuality();
-    Approvals::verify(app.items[0]);
+    Approvals::verify(app.items[0]); // 52% line coverage
 }
 
 /* Things to note
@@ -42,7 +42,7 @@ TEST(GildedRoseApprovals, TestMultipleValues)
     items.push_back(Item("Aged Brie", 0, 0));
     GildedRose app(items);
     app.updateQuality();
-    Approvals::verifyAll(app.items);
+    Approvals::verifyAll(app.items); // 67% line coverage
 }
 
 /* Things to note
@@ -79,7 +79,7 @@ TEST(GildedRoseApprovalTests, VerifyCombinations)
             [](string name, int sellIn, int quality) {
                 return getUpdatedItem(name, sellIn, quality);
             },
-            names, sellIns, qualities);
+            names, sellIns, qualities); // 67% line coverage
 }
 
 /* Things to note
@@ -105,7 +105,7 @@ TEST(GildedRoseApprovalTests, VerifyMoreCombinations)
             [](string name, int sellIn, int quality) {
                 return getUpdatedItem(name, sellIn, quality);
             },
-            names, sellIns, qualities);
+            names, sellIns, qualities); // 100% line coverage, 83% branch coverage
 }
 
 /* Things to note
@@ -129,7 +129,7 @@ TEST(GildedRoseApprovalTests, VerifyEvenMoreCombinations)
             [](string name, int sellIn, int quality) {
                 return getUpdatedItem(name, sellIn, quality);
             },
-            names, sellIns, qualities);
+            names, sellIns, qualities); // 100% line coverage, 100% branch coverage
 }
 
 /* Things to note
@@ -151,7 +151,7 @@ TEST(GildedRoseApprovalTests, VerifyEvenMoreCombinationsAfterMutation)
             [](string name, int sellIn, int quality) {
                 return getUpdatedItem(name, sellIn, quality);
             },
-            names, sellIns, qualities);
+            names, sellIns, qualities); // 100% line coverage, 100% branch coverage
 }
 
 /* Things to note
