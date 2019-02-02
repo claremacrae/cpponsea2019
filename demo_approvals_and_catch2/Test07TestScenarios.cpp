@@ -59,7 +59,7 @@ namespace
     class DateRemovingLogFileWriter : public ApprovalWriter
     {
     public:
-        DateRemovingLogFileWriter(LogFileWriter& writer) : writer(writer)
+        explicit DateRemovingLogFileWriter(LogFileWriter& writer) : writer(writer)
         {
         }
         string getFileExtensionWithDot() override
@@ -106,6 +106,74 @@ TEST_CASE("Deal with dates and times in output")
 //--------------------------------------------------------------------------------
 
 // Problem: Output is not suitable for writing to a text file
+
+namespace
+{
+    // Simulation for a Qt's class for representing images:
+    class QImage
+    {
+    public:
+        bool save(std::string path)
+        {
+            // Glossing over detail that the real QImage save method takes a QString
+            return true;
+        }
+    };
+
+    // An implementation of Approval's ApprovalWriter class, that takes
+    // an image, and when needed, writes it out as a correctly-named .png file.
+    class QImageWriter : public ApprovalWriter
+    {
+    public:
+        explicit QImageWriter(const QImage& image) : image(image)
+        {
+        }
+
+        std::string getFileExtensionWithDot() override
+        {
+            return ".png";
+        }
+
+        void write(std::string path) override
+        {
+            image.save(path);
+        }
+
+        void cleanUpReceived(std::string receivedPath) override
+        {
+        }
+
+    private:
+        QImage image;
+    };
+
+    QImage getImage()
+    {
+        return QImage();
+    }
+}
+
+TEST_CASE("Test an image", "[!shouldfail]")
+{
+    // Approvals is based on saving text files
+
+    // If we are testing a non-text type, we have some options.
+    // 1. We could write a text representation of the image, e.g. in pseudo-code
+    //      for each pixel:
+    //          write xpos, ypos, redvalue, greenvalue, bluevalue
+    //    This would work, but if we get a test failure, it would be hard for a user
+    //    to interpret the results/
+    // 2. We could write the image in a standard graphics format, and if we
+    //    have a diffing tool that supports images, the results will be easy to 
+    //    interpret.
+
+    QImage image = getImage();
+    QImageWriter imageWriter(image);
+
+    ApprovalTestNamer namer;
+
+    FileApprover::verify(namer, imageWriter, QuietReporter());
+}
 
 //--------------------------------------------------------------------------------
 //--------------------------------------------------------------------------------
