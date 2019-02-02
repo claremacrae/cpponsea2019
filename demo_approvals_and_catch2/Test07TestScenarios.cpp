@@ -175,6 +175,9 @@ TEST_CASE("Test an image", "[!shouldfail]")
 
     ApprovalTestNamer namer;
 
+    // We're using QuietReporter here due to using dummy image-writing code.
+    // In a real-world case, we'd use the standard DiffReporter(), to 
+    // review the results interactively.
     FileApprover::verify(namer, imageWriter, QuietReporter());
 }
 
