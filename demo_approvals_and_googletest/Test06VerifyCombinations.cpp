@@ -18,7 +18,7 @@ TEST(Test06VerifyCombinations, verifyAllCombinationsWithFunction)
         std::vector<std::string>,       // The type of element in our first input container
         std::vector<int>,               // The type of element in our second input container
         std::string>(                   // The return type from testing one combination of inputs
-            concatenateStringAndInt,    // Function that one combination of inputs, and returns the result to be approved
+            concatenateStringAndInt,    // Function that takes one combination of inputs, and returns the result to be approved
             strings,                    // The first input container
             numbers);                   // The second input container
 }
