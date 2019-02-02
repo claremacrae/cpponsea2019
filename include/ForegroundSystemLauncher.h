@@ -9,7 +9,7 @@
 class ForegroundSystemLauncher : public CommandLauncher
 {
 public:
-    bool Launch(std::vector<std::string> argv) override
+    bool launch(std::vector<std::string> argv) override
     {
         SystemLauncher temp_launcher;
         if (!temp_launcher.exists(argv.front()))
