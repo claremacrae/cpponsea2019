@@ -15,7 +15,7 @@ TEST_CASE("UseCustomReporter")
         GenericDiffReporter(R"(C:\Program Files\TortoiseHg\lib\kdiff3.exe)"));
 }
 
-TEST_CASE("UseQuietReporterr")
+TEST_CASE("UseQuietReporter")
 {
     // QuietReporter does nothing if a failure occurs.
     // It may be useful for running on build servers, where starting
