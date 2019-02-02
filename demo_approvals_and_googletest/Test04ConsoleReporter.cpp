@@ -3,7 +3,7 @@
 
 #include "../include/ConsoleDiffReporter.h"
 
-TEST(Test04, UseConsoleReporter)
+TEST(Test04, DISABLED_DUE_TO_INTENTIONAL_FAILURE_UseConsoleReporter)
 {
     FirstWorkingReporter diff_reporter(
         {
