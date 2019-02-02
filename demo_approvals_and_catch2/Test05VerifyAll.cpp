@@ -17,7 +17,7 @@ TEST_CASE("verifyAllWithVector")
 [1] = 1
 [2] = 2
 [3] = 3
- * 3. We an also supply a Reporter as an extra argument.
+ * 3. We can also supply a Reporter as an extra argument.
  */
 
 
@@ -48,7 +48,7 @@ Some descriptive text, to help understand the output
  *    the received output changes: if the text desribes the intention
  *    of the test, it can help make it clear whether the new output
  *    is now better, or is now broken.
- * 4. We an also supply a Reporter as an extra argument.
+ * 4. We can also supply a Reporter as an extra argument.
  */
 
 
@@ -80,7 +80,7 @@ Negate Values
 1 => -1
 2 => -2
 3 => -3
- * 4. We an also supply a Reporter as an extra argument.
+ * 4. We can also supply a Reporter as an extra argument.
  */
 
 TEST_CASE("verifyAllWithHeaderBeginEndAndLambda")
@@ -110,5 +110,5 @@ Test Squares
 1 => 1
 2 => 4
 3 => 9
- * 4. We an also supply a Reporter as an extra argument.
+ * 4. We can also supply a Reporter as an extra argument.
  */

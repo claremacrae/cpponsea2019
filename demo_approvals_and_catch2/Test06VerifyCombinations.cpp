@@ -38,7 +38,7 @@ TEST_CASE("verifyAllCombinationsWithFunction")
 (world, 2) => world 2
 (world, 3) => world 3
 
- * 5. We an also supply a Reporter as an extra argument.
+ * 5. We can also supply a Reporter as an extra argument.
  */
 
 
@@ -70,5 +70,5 @@ TEST_CASE("verifyAllCombinationsWithLambda")
 (world, 2) => world 2
 (world, 3) => world 3
 
- * 5. We an also supply a Reporter as an extra argument.
+ * 5. We can also supply a Reporter as an extra argument.
  */
