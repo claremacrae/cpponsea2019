@@ -14,3 +14,14 @@ TEST_CASE("UseCustomReporter")
         "Some\nMulti-line\noutput",
         GenericDiffReporter(R"(C:\Program Files\TortoiseHg\lib\kdiff3.exe)"));
 }
+
+TEST_CASE("UseQuietReporterr")
+{
+    // QuietReporter does nothing if a failure occurs.
+    // It may be useful for running on build servers, where starting
+    // a graphical diff tool for human inspection is not appropriate.
+    // Failing tests will still fail, but nothing will be launched.
+    Approvals::verify(
+        "Some\nMulti-line\noutput",
+        QuietReporter());
+}
