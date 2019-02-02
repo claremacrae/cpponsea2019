@@ -4,23 +4,23 @@
 
 namespace
 {
-    class LegacyResult;
-    std::ostream &operator<<(std::ostream &os, const LegacyResult &result);
-    LegacyResult doLegacyOperation();
+    class LegacyThing;
+    std::ostream &operator<<(std::ostream &os, const LegacyThing &result);
+    LegacyThing doLegacyOperation();
 
-    class LegacyResult
+    class LegacyThing
     {
     };
 
-    std::ostream &operator<<(std::ostream &os, const LegacyResult &result)
+    std::ostream &operator<<(std::ostream &os, const LegacyThing &result)
     {
         os << "Some complicated output\nfrom my legacy code\n";
         return os;
     }
 
-    LegacyResult doLegacyOperation()
+    LegacyThing doLegacyOperation()
     {
-        return LegacyResult();
+        return LegacyThing();
     }
 }
 
@@ -28,7 +28,7 @@ TEST_CASE("New test of legacy feature")
 {
     // Wrap up your legacy feature that needs testing in a function call
     // that returns some state that can be written to a text file
-    const LegacyResult result = doLegacyOperation();
+    const LegacyThing result = doLegacyOperation();
     Approvals::verify(result);
 }
 
