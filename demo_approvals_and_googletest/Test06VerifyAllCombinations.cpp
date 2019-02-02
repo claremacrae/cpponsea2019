@@ -9,7 +9,7 @@ namespace
     }
 }
 
-TEST(Test06VerifyCombinations, verifyAllCombinationsWithFunction)
+TEST(Test06VerifyAllCombinations, verifyAllCombinationsWithFunction)
 {
     const std::vector<std::string> strings{"hello", "world"};
     const std::vector<int> numbers{1, 2, 3};
@@ -42,7 +42,7 @@ TEST(Test06VerifyCombinations, verifyAllCombinationsWithFunction)
  */
 
 
-TEST(Test06VerifyCombinations, verifyAllCombinationsWithLambda)
+TEST(Test06VerifyAllCombinations, verifyAllCombinationsWithLambda)
 {
     std::vector<std::string> strings{"hello", "world"};
     std::vector<int> numbers{1, 2, 3};
