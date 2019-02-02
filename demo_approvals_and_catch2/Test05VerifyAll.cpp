@@ -1,6 +1,8 @@
 #include "ApprovalTests.hpp"
 #include "Catch.hpp"
 
+#include <list>
+
 TEST_CASE("verifyAllWithVector")
 {
     std::vector<int> numbers{ 0, 1, 2, 3};

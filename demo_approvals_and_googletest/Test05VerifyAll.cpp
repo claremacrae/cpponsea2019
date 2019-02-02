@@ -1,6 +1,8 @@
 #include "ApprovalTests.hpp"
 #include <gtest/gtest.h>
 
+#include <list>
+
 TEST(Test05VerifyAll, verifyAllWithVector)
 {
     std::vector<int> numbers{ 0, 1, 2, 3};
