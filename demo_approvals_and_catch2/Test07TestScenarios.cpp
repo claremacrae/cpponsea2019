@@ -95,6 +95,9 @@ TEST_CASE("Deal with dates and times in output")
     // strip out any dates and times, so that the files are expected to be
     // identical.
 
+    // This uses:
+    // void FileApprover::verify(ApprovalNamer& n, ApprovalWriter& w, const Reporter& r)
+
     ApprovalTestNamer namer;
 
     LogFileWriter writerBeingTested;
