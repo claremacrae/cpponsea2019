@@ -7,6 +7,8 @@ set(SOURCE_FILES
     Test01.cpp
     Test02.cpp
     Test03CustomReporters.cpp
-    Test04ConsoleReporter.cpp)
+    Test04ConsoleReporter.cpp
+    Test05VerifyAll.cpp
+    )
 add_executable(${PROJECT_NAME} ${SOURCE_FILES} )
 add_test(NAME ${PROJECT_NAME} COMMAND ${PROJECT_NAME})
