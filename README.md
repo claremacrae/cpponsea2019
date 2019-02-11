@@ -14,7 +14,9 @@ Code samples and information for my talk "Quickly Testing Legacy Code" at [C++ o
 
 Purpose of the sub-directories in this repo:
 
-* https://github.com/claremacrae/cpponsea2019/tree/master/demo_approvals_and_catch2
+* Some example uses of ApprovalTests.cpp with Catch2: [demo_approvals_and_catch2](demo_approvals_and_catch2)
+* Some example uses of ApprovalTests.cpp with Google Test: [demo_approvals_and_googletest](demo_approvals_and_googletest)
+* A worked example of the Gilded Rose Refactoring Kata: [gilded_rose_refactoring_kata](gilded_rose_refactoring_kata)
 
 ## Corrections
 
