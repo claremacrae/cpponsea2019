@@ -1,6 +1,6 @@
 # gilded_rose_refactoring_kata/
 
-A worked example of the [cpp version of Emily Bache's GildedRose Refactoring Kata](https://github.com/emilybache/GildedRose-Refactoring-Kata/tree/master/cpp)
+A worked example of the [cpp version of Emily Bache's GildedRose Refactoring Kata](https://github.com/emilybache/GildedRose-Refactoring-Kata/tree/master/cpp).
 
 The [history](https://github.com/claremacrae/cpponsea2019/commits/master/gilded_rose_refactoring_kata) shows the steps I went through to improve the test coverage of this code.
 
