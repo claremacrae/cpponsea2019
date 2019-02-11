@@ -16,9 +16,12 @@ The samples here demonstrate use of [ApprovalTests.cpp](https://github.com/appro
 
 Purpose of the sub-directories in this repo:
 
-* Some example uses of ApprovalTests.cpp with Catch2: [demo_approvals_and_catch2](demo_approvals_and_catch2)
-* Some example uses of ApprovalTests.cpp with Google Test: [demo_approvals_and_googletest](demo_approvals_and_googletest)
-* A worked example of the Gilded Rose Refactoring Kata: [gilded_rose_refactoring_kata](gilded_rose_refactoring_kata)
+* [demo_approvals_and_catch2/](demo_approvals_and_catch2)
+    * Some example uses of [ApprovalTests.cpp](https://github.com/approvals/ApprovalTests.cpp) with the [Catch2 test framework](https://github.com/catchorg/Catch2)
+* [demo_approvals_and_googletest/](demo_approvals_and_googletest)
+    * Some example uses of [ApprovalTests.cpp](https://github.com/approvals/ApprovalTests.cpp) with the [Google Test framework](https://github.com/google/googletest)
+* [gilded_rose_refactoring_kata/](gilded_rose_refactoring_kata)
+    * A worked example of the [cpp version of Emily Bache's GildedRose Refactoring Kata](https://github.com/emilybache/GildedRose-Refactoring-Kata/tree/master/cpp)
 
 ## Corrections
 
