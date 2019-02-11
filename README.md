@@ -8,7 +8,7 @@ The samples here demonstrate use of [ApprovalTests.cpp](https://github.com/appro
 
 * Abstract: [Quickly Testing Legacy Code](https://cpponsea.uk/sessions/quickly-testing-legacy-code.html)
 * Slides: [PowerPoint](https://www.slideshare.net/ClareMacrae/quickly-testing-legacy-code)
-* Slides: [PDF](https://github.com/philsquared/cpponsea-slides/blob/master/2019/Clare%20Macrae%20-%20Quickly%20Testing%20Legacy%20Code.pdf)
+* Slides: [PDF](https://github.com/philsquared/cpponsea-slides/raw/master/2019/Clare%20Macrae%20-%20Quickly%20Testing%20Legacy%20Code.pdf)
 * Code: [Github](https://github.com/claremacrae/cpponsea2019) (here)
 * Video: Not yet published...
 
@@ -26,7 +26,7 @@ Purpose of the sub-directories in this repo:
 ## Corrections
 
 * Lambdas to print values don't need a newline character.
-    * On slide 65 of the talk, I had a code snippet using `Approvals::verifyAll()` in which I said it was important to put a `'\n'` at the end of the lambda.
+    * On slide 65 of [the talk](https://github.com/philsquared/cpponsea-slides/raw/master/2019/Clare%20Macrae%20-%20Quickly%20Testing%20Legacy%20Code.pdf), I had a code snippet using `Approvals::verifyAll()` in which I said it was important to put a `'\n'` at the end of the lambda.
     * This is in fact untrue.
     * I said that because just before the talk, I had opened one of the output files on my laptop, and found that all the outputs ran on to a single line.
     * I later realised this was due to opening a file with Unix line endings in a dumb text editor on a PC.
