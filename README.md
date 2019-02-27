@@ -7,10 +7,10 @@ The samples here demonstrate use of [ApprovalTests.cpp](https://github.com/appro
 ## About the talk
 
 * Abstract: [Quickly Testing Legacy Code](https://cpponsea.uk/sessions/quickly-testing-legacy-code.html)
+* Video: [YouTube](https://youtu.be/dtm8V3TIB6k)
 * Slides: [PowerPoint](https://www.slideshare.net/ClareMacrae/quickly-testing-legacy-code)
 * Slides: [PDF](https://github.com/philsquared/cpponsea-slides/raw/master/2019/Clare%20Macrae%20-%20Quickly%20Testing%20Legacy%20Code.pdf)
 * Code: [Github](https://github.com/claremacrae/cpponsea2019) (here)
-* Video: [YouTube](https://youtu.be/dtm8V3TIB6k)
 
 ## ApprovalTests.cpp code samples
 
