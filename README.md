@@ -1,4 +1,4 @@
-# cpponsea2019
+# "Quickly Testing Legacy Code" at cpponsea2019
 
 Code samples and information for my talk "Quickly Testing Legacy Code" at [C++ on Sea 2019](https://cpponsea.uk/).
 
