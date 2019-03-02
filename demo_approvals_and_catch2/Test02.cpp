@@ -23,7 +23,7 @@ TEST_CASE("TestFixedInput")
  *    "Test02.TestFixedInput.approved.txt", i.e. an already-approved output
  *    for this test,
  * 3. As that file doesn't exist yet, approvals provides a convenient way for
- *    the developer to create it. It looks for one of long list of differencing
+ *    the developer to create it. It looks for one of a long list of differencing
  *    tools it knows about, and when it finds an available tool, it opens
  *    the tool showing the "received" file on one side, and the (empty) "approved"
  *    one on the other.
