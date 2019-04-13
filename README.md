@@ -1,5 +1,18 @@
 # "Quickly Testing Legacy Code" at cpponsea2019
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Contents**
+
+- [Introduction](#introduction)
+- [About the talk](#about-the-talk)
+- [ApprovalTests.cpp code samples](#approvaltestscpp-code-samples)
+- [Corrections](#corrections)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+## Introduction
+
 Code samples and information for my talk "Quickly Testing Legacy Code" at [C++ on Sea 2019](https://cpponsea.uk/).
 
 The samples here demonstrate use of [ApprovalTests.cpp](https://github.com/approvals/ApprovalTests.cpp), which is a new C++ implementation of Llewellyn Falco's [Approval Tests](http://approvaltests.com/) approach to testing legacy code.
