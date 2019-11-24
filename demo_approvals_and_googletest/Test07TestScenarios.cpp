@@ -156,7 +156,7 @@ namespace
     }
 }
 
-TEST(Test07TestScenarios, Test_an_image)
+TEST(Test07TestScenarios, DISABLED_DUE_TO_INTENTIONAL_FAILURE_Test_an_image)
 {
     // Approvals is based on saving text files
 
